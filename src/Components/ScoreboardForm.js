@@ -3,14 +3,13 @@ import React, {useState} from 'react'
 function ScoreboardForm({click, onScoreSubmit}) {
 
   const [name, setName] = useState("")
-  const [score, setScore] = useState({click})
 
   function handleName(e) {
     setName(e.target.value)
   }
-  function handleScore(e) {
-    setScore(e.target.value)
-  }
+  // function handleScore(e) {
+  //   setUpdatedClick(e.target.click)
+  // }
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -22,7 +21,7 @@ function ScoreboardForm({click, onScoreSubmit}) {
       },
       body: JSON.stringify({
         name: name,
-        score: score
+        score: click
       }),
     })
     .then(response => response.json())
@@ -40,10 +39,11 @@ function ScoreboardForm({click, onScoreSubmit}) {
           onChange={handleName}
           />
           <input 
-          type="text" 
+          type="number" 
           name="score"
           value={click}
-          onChange={handleScore}
+          readOnly={true}
+
           />
         <button className="ui button" type="submit">
           SUBMIT
