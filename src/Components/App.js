@@ -9,7 +9,7 @@ function App() {
 
   const [page, setPage] = useState("/")
   const [click, setClick] = useState(0);
-  const [seconds, setSeconds] = useState(10);
+  const [seconds, setSeconds] = useState(0);
   const [scores, setScores] = useState([]);
   const [buttonStop, setButtonStop] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:8000/scores")
     .then(response => response.json())
-    .then(sortedScores => setScores(sortedScores))
+    .then(scores => setScores(scores))
   },[])
 
   // const sortedScores = scores.sort((score1, score2) => {
@@ -27,15 +27,37 @@ function App() {
   //   }
   // })
 
-  // Timer
-  useEffect(() => {
-    if (seconds > 0) {
+  // // Timer
+  // useEffect(() => {
+  //   console.log(isClicked)
+  //   if (seconds > 0) {
+  //     setTimeout(() => setSeconds(seconds - 1), 1000)
+  //     // setSeconds(10)
+  //      setButtonStop(true)
+  //   } else {
+  //     // setSeconds(0)
+  //     // setTimeout(() => setSeconds(seconds - 1), 1000)
+  //     // setButtonStop(false)
+  //   }
+  // },[isClicked])
+
+
+  // //GAME CLICK BUTTON FUNCTION
+  // function handleClick() {
+  //   setClick((click) => (click + 1))
+  //   setIsClicked(true)
+  //   setSeconds(10)
+  // }
+
+   // Timer
+   useEffect(() => {
+    if (isClicked===true) {
+      console.log(isClicked)
       setTimeout(() => setSeconds(seconds - 1), 1000)
-      setButtonStop(false)
+       setButtonStop(true)
+       console.log(isClicked)
     } else {
-      setSeconds(0)
-      // setButtonStart(true)
-      setButtonStop(true)
+console.log("fuck!")
     }
   },[isClicked])
 
@@ -44,8 +66,9 @@ function App() {
   function handleClick() {
     setClick((click) => (click + 1))
     setIsClicked(true)
+    setSeconds(10)
+    
   }
-
 
 
   //SUBMIT SCORE FUNCTION
