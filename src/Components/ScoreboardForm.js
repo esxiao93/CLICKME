@@ -21,7 +21,7 @@ function ScoreboardForm({click, onScoreSubmit}) {
       },
       body: JSON.stringify({
         name: name,
-        score: click
+        score: click,
       }),
     })
     .then(response => response.json())

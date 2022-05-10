@@ -3,56 +3,31 @@
     text-align: center;
 }
 
-nav a {
+/* .navBar {
+    background-color: aqua;
+} */
+
+/* nav a {
     display: inline-block;
     margin: 1rem 2rem;
     text-decoration: none;
     font-size: 1.2em;
     color: rgb(11, 10, 10);
+    background-color: rgb(14, 231, 50);
     border-bottom: 2px solid rgb(11, 10, 10);
     transition: 0.1s;
-}
+} */
   
-nav a:hover,
+/* nav a:hover,
 nav a:active {
     color: rgb(0, 0, 0);
     border-bottom: 2px solid rgb(1, 1, 1);
-}
+} */
   
-nav a.active {
+/* nav a.active {
     background-color: black;
     color: white;
-}
-  
-#home {
-    height: 50vh;
-    min-height: 400px;
-    background-color: cornsilk;
-}
-  
-#home,
-#about,
-#projects {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
-}
-  
-#about img {
-    max-height: 50%;
-}
-  
-#about a {
-    display: block;
-}
-  
-#projects {
-    background-color: cornsilk;
-    min-height: 400px;
-}
+} */
   
 body {
     margin: 0;
@@ -95,4 +70,27 @@ body {
 
 .counterText {
     font-size: 100px
+}
+
+.centerTheFuckingScores {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+.centerTheFuckingScores td, .centerTheFuckingScores th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+.centerTheFuckingScores tr:nth-child(even){background-color: #f2f2f2;}
+
+.centerTheFuckingScores tr:hover {background-color: #ddd;}
+  
+.centerTheFuckingScores th {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: left;
+    background-color: #000000;
+    color: white;
 }
