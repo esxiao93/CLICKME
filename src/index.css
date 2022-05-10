@@ -2,6 +2,32 @@
     box-sizing: border-box;
     text-align: center;
 }
+
+/* .navBar {
+    background-color: aqua;
+} */
+
+/* nav a {
+    display: inline-block;
+    margin: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(11, 10, 10);
+    background-color: rgb(14, 231, 50);
+    border-bottom: 2px solid rgb(11, 10, 10);
+    transition: 0.1s;
+} */
+  
+/* nav a:hover,
+nav a:active {
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(1, 1, 1);
+} */
+  
+/* nav a.active {
+    background-color: black;
+    color: white;
+} */
   
 body {
     margin: 0;
@@ -44,4 +70,27 @@ body {
 
 .counterText {
     font-size: 100px
+}
+
+.centerTheFuckingScores {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+.centerTheFuckingScores td, .centerTheFuckingScores th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+.centerTheFuckingScores tr:nth-child(even){background-color: #f2f2f2;}
+
+.centerTheFuckingScores tr:hover {background-color: #ddd;}
+  
+.centerTheFuckingScores th {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: left;
+    background-color: #000000;
+    color: white;
 }

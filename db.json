@@ -2,10 +2,23 @@
   "scores": [
     {
       "name": "Eric",
-      "score": {
-        "click": 0
-      },
+      "score": 71,
       "id": 1
+    },
+    {
+      "name": "Eric2",
+      "score": 67,
+      "id": 2
+    },
+    {
+      "name": "Eric3",
+      "score": 59,
+      "id": 3
+    },
+    {
+      "name": "Eric5",
+      "score": 59,
+      "id": 4
     }
   ]
 }

@@ -1,13 +1,11 @@
 import React from 'react';
 
-function Button({click, onClick}) {
-
-
-//JS CODE FOR CLICK COUNTER
+function Button({seconds, click, onClick, buttonStop}) {
 
   return (
     <div className="backplateForClickMeButton">
-        <button type="button" className="clickMeButton" onClick={onClick}>CLICKER</button>
+      <div className="timerContainer">{seconds}</div>
+        <button type="button" disabled={buttonStop} className="clickMeButton" onClick={onClick}>CLICKER</button>
         <div className="counterText">
             COUNTER <br></br>
             {click}

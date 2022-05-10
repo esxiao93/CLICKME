@@ -2,7 +2,9 @@ import React from 'react'
 
 function AboutUs() {
   return (
-    <div></div>
+    <div>
+      ADD STATS OF GAME AND POST TO ABOUTUS AND ADD GITHUB, BASIC INFO
+    </div>
   )
 }
 
