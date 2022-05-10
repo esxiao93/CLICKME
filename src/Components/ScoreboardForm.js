@@ -46,7 +46,7 @@ function ScoreboardForm({click, onScoreSubmit}) {
 
           />
         <button className="ui button" type="submit">
-          SUBMIT
+          SUBMIT SCORE
         </button>
       </form>
     </div>

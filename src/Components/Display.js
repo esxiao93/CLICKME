@@ -6,16 +6,19 @@ import ScoreboardForm from './ScoreboardForm';
 function Display() {
 
   const [click, setClick] = useState(0);
-  const [seconds, setSeconds] = useState(5);
+  const [seconds, setSeconds] = useState(10);
   const [scores, setScores] = useState([])
+  const [buttonStop, setButtonStop] = useState(false)
 
   //Timer
   // if timer is equal to 000000, then clickbutton => .propagation()
   useEffect(() => {
     if (seconds > 0) {
       setTimeout(() => setSeconds(seconds - 1), 1000)
+      setButtonStop(false)
     } else {
       setSeconds(0)
+      setButtonStop(true)
     }
   })
 
@@ -34,7 +37,7 @@ function Display() {
   return (
     <div>
         <Timer seconds={seconds}/>
-        <Button click={click} onClick={handleClick}/>
+        <Button click={click} onClick={handleClick} buttonStop={buttonStop}/>
         <ScoreboardForm click={click} onScoreSubmit={handleScoreSubmission} />
     </div>
   )

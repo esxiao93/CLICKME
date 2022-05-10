@@ -2,6 +2,57 @@
     box-sizing: border-box;
     text-align: center;
 }
+
+nav a {
+    display: inline-block;
+    margin: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(11, 10, 10);
+    border-bottom: 2px solid rgb(11, 10, 10);
+    transition: 0.1s;
+}
+  
+nav a:hover,
+nav a:active {
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(1, 1, 1);
+}
+  
+nav a.active {
+    background-color: black;
+    color: white;
+}
+  
+#home {
+    height: 50vh;
+    min-height: 400px;
+    background-color: cornsilk;
+}
+  
+#home,
+#about,
+#projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+  
+#about img {
+    max-height: 50%;
+}
+  
+#about a {
+    display: block;
+}
+  
+#projects {
+    background-color: cornsilk;
+    min-height: 400px;
+}
   
 body {
     margin: 0;
