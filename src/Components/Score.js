@@ -3,7 +3,7 @@ import React from 'react';
 function Score({id, name, score}) {
   return (
     <tr>
-        <td>{id}</td>
+        <td></td>
         <td>{name}</td>
         <td>{score}</td>
     </tr>

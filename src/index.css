@@ -80,7 +80,7 @@ body {
   
 .centerTheFuckingScores td, .centerTheFuckingScores th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 20px;
 }
   
 .centerTheFuckingScores tr:nth-child(even){background-color: #f2f2f2;}

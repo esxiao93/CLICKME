@@ -9,7 +9,7 @@ function App() {
 
   const [page, setPage] = useState("/")
   const [click, setClick] = useState(0);
-  const [seconds, setSeconds] = useState(5);
+  const [seconds, setSeconds] = useState(3);
   const [scores, setScores] = useState([]);
   const [buttonStop, setButtonStop] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -54,6 +54,28 @@ function App() {
     setScores(updatedArray)
   }
 
+  const filteredScores = scores.sort((a,b) => {
+    if(a.score === b.score){
+      return b.score - a.score;
+    } else {
+      return b.score - a.score
+    }
+  })
+
+
+  // for(i=0;i<10;i++){
+  //   if(i>=10){break}
+  // }
+
+  let i = 0
+  let topTen = filteredScores.map((score)=>{
+    if(i < 10) {
+      i++
+      return score;
+      ;
+    } else if (i>=10) {break}
+  })
+
   return (
     <div>
       <h1>CLICKER GAME</h1>
@@ -63,7 +85,7 @@ function App() {
             path="/scoreboard" 
             element={
               <Scoreboard
-                scores={scores}
+                scores={topTen}
               />
             } 
           />
@@ -89,29 +111,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-//    // Timer
-//    useEffect(() => {
-//     if (isClicked===true) {
-//       console.log(isClicked)
-//       setTimeout(() => setSeconds(seconds - 1), 1000)
-//        setButtonStop(true)
-//        console.log(isClicked)
-//     } else {
-// console.log("fuck!")
-//     }
-//   },[isClicked])
-
-
-//   //GAME CLICK BUTTON FUNCTION
-//   function handleClick() {
-//     setClick((click) => (click + 1))
-//     setIsClicked(true)
-//     setSeconds(10)
-    
-//   }

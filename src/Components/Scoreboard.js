@@ -12,7 +12,19 @@ function Scoreboard({scores}) {
     />
   })
 
+  // const handleClick = (e) => {
+  //   console.log(e.target)
+  // }
+
   return (
+    // <div className="board">
+    //   <h1 className="leaderboard">LEADERBOARD</h1>
+
+    //   <div className="duration">
+    //     <button onClick={handleClick} data-id="7">7 Days</button>
+    //     <button onClick={handleClick} data-id="30">30 Days</button>
+    //     <button onClick={handleClick} data-id="0">All-Time</button>
+    //   </div>
       <table className="centerTheFuckingScores">
         <tbody>
           <tr>
@@ -29,6 +41,7 @@ function Scoreboard({scores}) {
           {scoreItems}
         </tbody>
       </table>
+    // </div>
   )
 }
 
