@@ -1,15 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 
 function ScoreboardForm({click, onScoreSubmit}) {
 
-  const [name, setName] = useState("")
+  const [name, setName] = useState("");
 
   function handleName(e) {
     setName(e.target.value)
-  }
-  // function handleScore(e) {
-  //   setUpdatedClick(e.target.click)
-  // }
+  };
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -26,20 +23,20 @@ function ScoreboardForm({click, onScoreSubmit}) {
     })
     .then(response => response.json())
     .then((newScore => onScoreSubmit(newScore)));
-    }
+    };
 
   return (
-<div className="ui segment blue inverted">
-      <form className="ui form" onSubmit={handleSubmit}>
+    <div>
+      <form className="FormContainer" onSubmit={handleSubmit}>
           <input 
           type="text" 
           name="name" 
-          placeholder="NAME" 
+          placeholder="ENTER NAME" 
           value={name}
           onChange={handleName}
           />
           <input 
-          type="number" 
+          type="hidden" 
           name="score"
           value={click}
           readOnly={true}
@@ -50,7 +47,7 @@ function ScoreboardForm({click, onScoreSubmit}) {
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default ScoreboardForm

@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Score({id, name, score}) {
+function Score({id, rank, name, score}) {
   return (
     <tr>
-        <td></td>
+        <td>{rank}</td>
         <td>{name}</td>
         <td>{score}</td>
     </tr>
-  )
-}
+  );
+};
 
 export default Score;

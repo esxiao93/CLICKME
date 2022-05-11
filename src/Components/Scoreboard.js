@@ -3,14 +3,17 @@ import Score from "./Score";
 
 function Scoreboard({scores}) {
 
+  let r = 0;
   const scoreItems = scores.map((score) => {
+    r++;
     return <Score 
     key={score.id}
     id={score.id}
+    rank={r}
     name={score.name}
     score={score.score}
     />
-  })
+  });
 
   // const handleClick = (e) => {
   //   console.log(e.target)
@@ -25,7 +28,7 @@ function Scoreboard({scores}) {
     //     <button onClick={handleClick} data-id="30">30 Days</button>
     //     <button onClick={handleClick} data-id="0">All-Time</button>
     //   </div>
-      <table className="centerTheFuckingScores">
+      <table className="centerScores">
         <tbody>
           <tr>
             <th className="header">
@@ -42,7 +45,7 @@ function Scoreboard({scores}) {
         </tbody>
       </table>
     // </div>
-  )
-}
+  );
+};
 
 export default Scoreboard;
