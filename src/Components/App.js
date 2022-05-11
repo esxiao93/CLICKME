@@ -9,7 +9,7 @@ function App() {
 
   const [page, setPage] = useState("/")
   const [click, setClick] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+  const [seconds, setSeconds] = useState(5);
   const [scores, setScores] = useState([]);
   const [buttonStop, setButtonStop] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -27,47 +27,24 @@ function App() {
   //   }
   // })
 
-  // // Timer
-  // useEffect(() => {
-  //   console.log(isClicked)
-  //   if (seconds > 0) {
-  //     setTimeout(() => setSeconds(seconds - 1), 1000)
-  //     // setSeconds(10)
-  //      setButtonStop(true)
-  //   } else {
-  //     // setSeconds(0)
-  //     // setTimeout(() => setSeconds(seconds - 1), 1000)
-  //     // setButtonStop(false)
-  //   }
-  // },[isClicked])
-
-
-  // //GAME CLICK BUTTON FUNCTION
-  // function handleClick() {
-  //   setClick((click) => (click + 1))
-  //   setIsClicked(true)
-  //   setSeconds(10)
-  // }
-
-   // Timer
-   useEffect(() => {
-    if (isClicked===true) {
-      console.log(isClicked)
+  // Timer
+  useEffect(() => {
+    console.log(isClicked)
+    if (seconds > 0 && click > 0) {
+      setSeconds(seconds)
       setTimeout(() => setSeconds(seconds - 1), 1000)
-       setButtonStop(true)
-       console.log(isClicked)
-    } else {
-console.log("fuck!")
+      setButtonStop(false)
+    } else if (seconds === 0 && click > 0){
+      setSeconds(0)
+      setButtonStop(true)
     }
-  },[isClicked])
+  })
 
 
   //GAME CLICK BUTTON FUNCTION
   function handleClick() {
+    // setIsClicked((isClicked) => !isClicked)
     setClick((click) => (click + 1))
-    setIsClicked(true)
-    setSeconds(10)
-    
   }
 
 
@@ -112,3 +89,29 @@ console.log("fuck!")
 }
 
 export default App;
+
+
+
+
+
+
+//    // Timer
+//    useEffect(() => {
+//     if (isClicked===true) {
+//       console.log(isClicked)
+//       setTimeout(() => setSeconds(seconds - 1), 1000)
+//        setButtonStop(true)
+//        console.log(isClicked)
+//     } else {
+// console.log("fuck!")
+//     }
+//   },[isClicked])
+
+
+//   //GAME CLICK BUTTON FUNCTION
+//   function handleClick() {
+//     setClick((click) => (click + 1))
+//     setIsClicked(true)
+//     setSeconds(10)
+    
+//   }
