@@ -22,13 +22,15 @@ function ScoreboardForm({click, onScoreSubmit}) {
       }),
     })
     .then(response => response.json())
-    .then((newScore => onScoreSubmit(newScore)));
+    .then((newScore => onScoreSubmit(newScore)))
+    .then(setName(""));
     };
 
   return (
     <div>
-      <form className="FormContainer" onSubmit={handleSubmit}>
+      <form className="formContainer" onSubmit={handleSubmit}>
           <input 
+          className="inputName"
           type="text" 
           name="name" 
           placeholder="ENTER NAME" 
@@ -42,8 +44,8 @@ function ScoreboardForm({click, onScoreSubmit}) {
           readOnly={true}
 
           />
-        <button className="ui button" type="submit">
-          SUBMIT SCORE
+        <button className="uiButton" type="submit">
+          <span className="uiButtonText">SUBMIT SCORE</span>
         </button>
       </form>
     </div>

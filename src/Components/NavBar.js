@@ -6,9 +6,9 @@ function NavBar() {
   return (
     <div className="navbarContainer">
       <nav>
-        <NavLink className="homeLink" to="/">HOME</NavLink>
-        <NavLink className="scoreboardLink" to="/scoreboard">SCOREBOARD</NavLink>
-        <NavLink className="aboutUsLink" to="/aboutus">ABOUTUS</NavLink>
+        <NavLink activeClassName="homeLink" to="/">HOME</NavLink>
+        <NavLink activeClassName="scoreboardLink" to="/scoreboard">SCOREBOARD</NavLink>
+        <NavLink activeClassName="aboutUsLink" to="/aboutus">ABOUT</NavLink>
       </nav>
     </div>
   );

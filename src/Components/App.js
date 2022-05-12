@@ -7,12 +7,12 @@ import AboutUs from "./AboutUs";
 
 function App() {
 
-  let duration = 3;
+  let duration = 10;
 //State Variables
   const [page, setPage] = useState("/"); //Routing
   const [click, setClick] = useState(0); //Main Click For Game Button
   const [buttonStop, setButtonStop] = useState(false); //Disables Game Button
-  const [seconds, setSeconds] = useState(3); //Timer
+  const [seconds, setSeconds] = useState(10); //Timer
   const [scores, setScores] = useState([]); //Scores
 
 //GAME CLICK BUTTON FUNCTION
@@ -68,7 +68,9 @@ function App() {
 
   return (
     <div>
-      <h1>CLICKER GAME</h1>
+      <div className="titleContainer">
+      <h1 >CLICKER GAME</h1>
+      </div>
       <div className="mainPage">
         <NavBar onChangePage={setPage} />
         <Routes>

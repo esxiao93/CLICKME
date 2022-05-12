@@ -1,22 +1,23 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 function Button({seconds, click, onClick, buttonStop, handleReset}) {
-
-
-
 
   return (
     <div className="backgroundContainer">
       <div className="clickerGameContainer">
+        <h1>-TIMER-</h1>
         <div className="timer">{seconds}</div>
-          <button type="button" disabled={buttonStop} className="clickerButton" onClick={onClick}>CLICKER</button>
+          <button type="button" disabled={buttonStop} className="clickerButton" onClick={onClick}>
+            <span className="buttonText">CLICKER</span>
+          </button>
           <div className="counter">
-              COUNTER <br></br>
+              <span>COUNTER</span>
+              <br></br>
               {click}
           </div>
           {seconds === 0 ? (
           <button className="resetButton" onClick={handleReset} >
-              RESET <br></br>
+              <span className="resetButtonText">PLAY AGAIN</span>
           </button>
           ) : (
           null
