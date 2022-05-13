@@ -1,13 +1,17 @@
 import React, {useState} from 'react';
 
+
 function ScoreboardForm({click, onScoreSubmit}) {
 
+//STATE VARIABLE FOR NAME
   const [name, setName] = useState("");
 
+//FUNCTION TO CONTAIN THE NAME INPUT
   function handleName(e) {
     setName(e.target.value)
   };
 
+//FUNCTION TO POST NAME INPUT AND SCORE HIDDEN TO SCOREBOARD
   function handleSubmit(e) {
     e.preventDefault()
 
@@ -44,7 +48,7 @@ function ScoreboardForm({click, onScoreSubmit}) {
           readOnly={true}
 
           />
-        <button className="uiButton" type="submit">
+        <button className="uiButton" type="submit" >
           <span className="uiButtonText">SUBMIT SCORE</span>
         </button>
       </form>
@@ -52,4 +56,4 @@ function ScoreboardForm({click, onScoreSubmit}) {
   );
 };
 
-export default ScoreboardForm
+export default ScoreboardForm;

@@ -8,7 +8,7 @@ import AboutUs from "./AboutUs";
 function App() {
 
   let duration = 10;
-//State Variables
+//STATE VARIABLES
   const [page, setPage] = useState("/"); //Routing
   const [click, setClick] = useState(0); //Main Click For Game Button
   const [buttonStop, setButtonStop] = useState(false); //Disables Game Button
@@ -69,7 +69,7 @@ function App() {
   return (
     <div>
       <div className="titleContainer">
-      <h1 >CLICKER GAME</h1>
+      <h1 >ARE YOU A GAMER?</h1>
       </div>
       <div className="mainPage">
         <NavBar onChangePage={setPage} />

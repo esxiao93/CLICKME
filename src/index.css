@@ -90,7 +90,8 @@ a:hover:after{
     color: #ffd000;
 }
 .counter {
-    font-size: 70px
+    padding: 20px;
+    font-size: 60px
 }
 .resetButton {
     border-radius: 50px;
@@ -132,8 +133,10 @@ a:hover:after{
     background-color: beige;
 }
 .inputName {
-    border-radius: 50px;
+    border-radius: 0px;
     padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     margin-right: 10px;
     box-shadow: 3px 3px 12px 3px #000000;
 }
@@ -148,6 +151,14 @@ a:hover:after{
     font-weight: bold;
 }
 
+.trollText {
+    background: linear-gradient(90deg, rgb(242, 255, 0), rgb(255, 124, 1));
+    font-family: bold;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .wrapper{
     position: absolute;
     width: 100%;
@@ -157,7 +168,7 @@ a:hover:after{
 }
 
 h2 {
-    font-family: poppins;
+    font-family: Poppins;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -233,7 +244,7 @@ h2 {
 @keyframes animate{
     0%{
         transform: scale(0) translateY(0);
-        opacity: 1;
+        opacity: 10;
     }
     
     100%{
